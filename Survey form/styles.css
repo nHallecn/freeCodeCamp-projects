@@ -1,0 +1,143 @@
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        padding: 20px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .container {
+        width: 100%;
+        max-width: 700px;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      }
+      
+      header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      
+      #title {
+        color: #2c3e50;
+        margin-bottom: 10px;
+        font-size: 2.2em;
+      }
+      
+      #description {
+        color: #7f8c8d;
+        font-style: italic;
+        font-size: 1.1em;
+      }
+      
+      #survey-form {
+        display: grid;
+        gap: 20px;
+      }
+      
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      
+      label {
+        font-weight: 600;
+        color: #2c3e50;
+      }
+      
+      input, select, textarea {
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: border 0.3s, box-shadow 0.3s;
+      }
+      
+      input:focus, select:focus, textarea:focus {
+        outline: none;
+        border-color: #3498db;
+        box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+      }
+      
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      select {
+        height: 45px;
+      }
+      
+      .radio-group, .checkbox-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 5px;
+      }
+      
+      .radio-option, .checkbox-option {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      
+      input[type="radio"],
+      input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        accent-color: #3498db;
+      }
+      
+      textarea {
+        resize: vertical;
+        min-height: 120px;
+        font-family: inherit;
+      }
+      
+      #submit {
+        background: #3498db;
+        color: white;
+        border: none;
+        padding: 15px;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+        margin-top: 10px;
+      }
+      
+      #submit:hover {
+        background: #2980b9;
+      }
+      
+      .required {
+        color: #e74c3c;
+      }
+      
+      @media (max-width: 600px) {
+        .container {
+          padding: 20px;
+        }
+        
+        #title {
+          font-size: 1.8em;
+        }
+        
+        input, select, textarea {
+          padding: 10px;
+        }
+      }

@@ -1,0 +1,157 @@
+/* --- Google Font Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* --- CSS Variables for Easy Customization --- */
+:root {
+  --primary-color: #0077b6; /* A professional blue */
+  --background-color: #f4f8fa; /* Soft, light gray background */
+  --form-background: #ffffff; /* Clean white for the form */
+  --text-color: #333333; /* Dark gray for text, easier on the eyes than black */
+  --label-color: #555555; /* Slightly lighter for labels */
+  --border-color: #dce4e8;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* --- Global & Body Styling --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* --- Header Styling --- */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+/* --- Main Form Container --- */
+form {
+  background-color: var(--form-background);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px var(--shadow-color);
+  width: 100%;
+  max-width: 650px;
+}
+
+/* --- Fieldset and Legend Grouping --- */
+fieldset {
+  border: none;
+  margin-bottom: 1.5rem;
+  padding: 0;
+}
+
+legend {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+/* --- General Label and Input Styling --- */
+label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--label-color);
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.2);
+}
+
+/* --- Specific Styling for Radio & Checkboxes --- */
+.radio-group, .checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 0.75rem;
+  transform: scale(1.2);
+  accent-color: var(--primary-color);
+}
+
+/* Make labels for radios/checkboxes align nicely */
+fieldset > label[for="yes-option"],
+fieldset > label[for="no-option"],
+fieldset > label[for="ads"],
+fieldset > label[for="recommendation"],
+fieldset > label[for="location"],
+fieldset > label[for="reputation"],
+fieldset > label[for="price"] {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  margin-right: 1.5rem;
+  vertical-align: middle;
+}
+
+/* --- Text Area Styling --- */
+textarea {
+  resize: vertical;
+  min-height: 120px;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Submit Button --- */
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button[type="submit"]:hover {
+  background-color: #005f8b; /* A darker shade of the primary color */
+  transform: translateY(-2px);
+}
