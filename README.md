@@ -40,16 +40,7 @@ This curriculum covers a wide range of modern web development technologies. The 
 * **Frontend**:
     * HTML5
     * CSS3 (including Flexbox and Grid)
-    * JavaScript (ES6+)
-    * React
-
-* **Backend**:
-    * Node.js
-    * Express.js
-
-* **Databases**:
-    * MongoDB with Mongoose
-    * PostgreSQL
+   
 
 * **Development Tools**:
     * Git & GitHub
