@@ -20,11 +20,11 @@ Here is a list of the projects I have completed so far. Each project is located 
 |Book Catalog Table	                |A responsive table layout displaying a catalog of books.	   |[View Project](http://127.0.0.1:5500/index.html)	                         |HTML5,             |
 |Business Card	                    |A simple and stylish digital business card component. 	       |[View Project](http://127.0.0.1:5500/index.html)                         |HTML5, CSS3
 |Hotel Feedback	                    |A web form designed for users to submit hotel feedback.	   |[View Project](http://127.0.0.1:5500/index.html)	                         |HTML5, CSS3
-|Lab Event Hub	                    |An informational page or hub for lab-related events.	       |View Project	                         |HTML5,
+|Lab Event Hub	                    |An informational page or hub for lab-related events.	       |[View Project](http://127.0.0.1:5500/FreeCodeCampSurvey.html)	                         |HTML5,
 |Lab Multimedia Player	            |A custom-styled player for audio or video content.	           |View Project	                         |HTML5,  
 |Movie Review Page	                |A webpage designed to showcase a review for a movie.	       |View Project	                         |HTML5, 
-|Recipe Page	                    |A clean, well-structured page to display a recipe.	           |View Project	                         |HTML5, 
-|Survey Form	                    |A responsive survey form with various input fields.	       |View Project	                         |HTML5, CSS3
+|Recipe Page	                    |A clean, well-structured page to display a recipe.	           |View Project	                         |HTML5, CSS3
+|Survey Form	                    |A responsive survey form with various input fields.	       |View Project	                         |HTML5, 
 |Travel Agency Page	                |A landing page for a fictional travel agency.	               |View Project	                         |HTML5, 
 |Video Compilation Page
 
