@@ -19,7 +19,7 @@ Here is a list of the projects I have completed so far. Each project is located 
 | --------------------------------- | ------------------------------------------------------------ | --------------------------------------- | --------------------- |
 |Book Catalog Table	                |A responsive table layout displaying a catalog of books.	   |[View Project](http://127.0.0.1:5500/index.html)	                         |HTML5,             |
 |Business Card	                    |A simple and stylish digital business card component. 	       |[View Project](http://127.0.0.1:5500/index.html)                         |HTML5, CSS3
-|Hotel Feedback	                    |A web form designed for users to submit hotel feedback.	   |View Project	                         |HTML5, CSS3
+|Hotel Feedback	                    |A web form designed for users to submit hotel feedback.	   |[View Project](http://127.0.0.1:5500/index.html)	                         |HTML5, CSS3
 |Lab Event Hub	                    |An informational page or hub for lab-related events.	       |View Project	                         |HTML5,
 |Lab Multimedia Player	            |A custom-styled player for audio or video content.	           |View Project	                         |HTML5,  
 |Movie Review Page	                |A webpage designed to showcase a review for a movie.	       |View Project	                         |HTML5, 
