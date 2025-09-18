@@ -63,7 +63,7 @@ This curriculum covers a wide range of modern web development technologies. The 
 I'm always open to connecting with other learners and developers. Feel free to reach out!
 
 * **freeCodeCamp Profile**: [My Profile](https://www.freecodecamp.org/njihallecho-nkwenti)
-* **LinkedIn**: (www.linkedin.com/in/nji-halle-cho-nkwenti-2b0a29334e])
+*  [LinkedIn](www.linkedin.com/in/nji-halle-cho-nkwenti-2b0a29334e])
 
 ---
 
