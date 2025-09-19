@@ -26,7 +26,8 @@ Here is a list of the projects I have completed so far. Each project is located 
 |Recipe Page	                    |A clean, well-structured page to display a recipe.	           |View Project	                         |HTML5, CSS3
 |Survey Form	                    |A responsive survey form with various input fields.	       |View Project	                         |HTML5, 
 |Travel Agency Page	                |A landing page for a fictional travel agency.	               |View Project	                         |HTML5, 
-|Video Compilation Page
+|Video Compilation Page | A video compilation page | |HTML5
+To do list |A styled to-do list |  |HTML5,CSS3
 
 
 *(As you complete each project, you can add a new row to this table with a link to the live demo hosted on a platform like GitHub Pages)*
