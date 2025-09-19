@@ -28,7 +28,7 @@ Here is a list of the projects I have completed so far. Each project is located 
 |Travel Agency Page	                |A landing page for a fictional travel agency.	               |View Project	                         |HTML5, 
 |Video Compilation Page | A video compilation page | |HTML5
 To do list |A styled to-do list |  |HTML5,CSS3
-|BOg post card | Styled blog-post card| |HTML5, CSS3
+|Blog post card | Styled blog-post card| |HTML5, CSS3
 
 
 ## 🛠️ Technologies & Tools
