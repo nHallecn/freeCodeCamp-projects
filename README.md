@@ -29,7 +29,7 @@ Here is a list of the projects I have completed so far. Each project is located 
 |Video Compilation Page | A video compilation page | |HTML5
 To do list |A styled to-do list |  |HTML5,CSS3
 |Blog post card | Styled blog-post card| |HTML5, CSS3
-
+|Event flyer                    |A clean, well-structured page displaying an event details.	           |                 |HTML5, CSS3
 
 ## 🛠️ Technologies & Tools
 
