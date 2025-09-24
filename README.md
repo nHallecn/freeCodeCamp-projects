@@ -30,7 +30,7 @@ Here is a list of the projects I have completed so far. Each project is located 
 To do list |A styled to-do list |  |HTML5,CSS3
 |Blog post card | Styled blog-post card| |HTML5, CSS3
 |Event flyer                    |A clean, well-structured page displaying an event details.	           |                 |HTML5, CSS3
-|set-of-colored-boxes| A set of colored boxes styled with css| | |
+|set-of-colored-boxes| A set of colored boxes styled with css| |HTML5, CSS3 |
 ## 🛠️ Technologies & Tools
 
 This curriculum covers a wide range of modern web development technologies. The main tools I am using throughout these projects include:
