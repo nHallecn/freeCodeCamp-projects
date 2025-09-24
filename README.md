@@ -17,10 +17,10 @@ Here is a list of the projects I have completed so far. Each project is located 
 
 | Project Name                      | Description                                                  | Live Demo                               | Technologies Used     |
 | --------------------------------- | ------------------------------------------------------------ | --------------------------------------- | --------------------- |
-|Book Catalog Table	                |A responsive table layout displaying a catalog of books.	   |[View Project](http://127.0.0.1:5500/index.html)	                         |HTML5,             |
-|Business Card	                    |A simple and stylish digital business card component. 	       |[View Project](http://127.0.0.1:5500/index.html)                         |HTML5, CSS3
-|Hotel Feedback	                    |A web form designed for users to submit hotel feedback.	   |[View Project](http://127.0.0.1:5500/index.html)	                         |HTML5, CSS3
-|Lab Event Hub	                    |An informational page or hub for lab-related events.	       |[View Project](http://127.0.0.1:5500/FreeCodeCampSurvey.html)	                         |HTML5,
+|Book Catalog Table	                |A responsive table layout displaying a catalog of books.	   |	                         |HTML5,             |
+|Business Card	                    |A simple and stylish digital business card component. 	       |                        |HTML5, CSS3
+|Hotel Feedback	                    |A web form designed for users to submit hotel feedback.	   |	                         |HTML5, CSS3
+|Lab Event Hub	                    |An informational page or hub for lab-related events.	       |	                         |HTML5,
 |Lab Multimedia Player	            |A custom-styled player for audio or video content.	           |View Project	                         |HTML5,  
 |Movie Review Page	                |A webpage designed to showcase a review for a movie.	       |View Project	                         |HTML5, 
 |Recipe Page	                    |A clean, well-structured page to display a recipe.	           |View Project	                         |HTML5, CSS3
@@ -30,7 +30,7 @@ Here is a list of the projects I have completed so far. Each project is located 
 To do list |A styled to-do list |  |HTML5,CSS3
 |Blog post card | Styled blog-post card| |HTML5, CSS3
 |Event flyer                    |A clean, well-structured page displaying an event details.	           |                 |HTML5, CSS3
-
+|set-of-colored-boxes| A set of colored boxes styled with css| | |
 ## 🛠️ Technologies & Tools
 
 This curriculum covers a wide range of modern web development technologies. The main tools I am using throughout these projects include:
