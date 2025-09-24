@@ -1,0 +1,41 @@
+body {
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        .color-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            max-width: 800px;
+            margin-top: 20px;
+        }
+        
+        .color-box {
+            width: 150px;
+            height: 150px;
+            border-radius: 8px;
+        }
+        
+        .color1 {
+            background-color: #3498db;
+        }
+
+        .color2 {
+            background-color: rgb(231, 76, 60);
+        }
+        
+        .color3 {
+            background-color: purple;
+        }
+        
+        .color4 {
+            background-color: hsl(120, 100%, 25%);
+        }
+        
+        .color5 {
+            background-color: rgba(243, 156, 18, 0.8);
+        }
