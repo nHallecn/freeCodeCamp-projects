@@ -33,6 +33,9 @@ To do list |A styled to-do list |  |HTML5,CSS3
 |set-of-colored-boxes| A set of colored boxes styled with css| |HTML5, CSS3 |
 |design-a-contact-form| A contact form | |HTML5, CSS3 |
 |confidential-email| A contact form | |HTML5, CSS3 |
+|news paper article|||HTML5, CSS3 |
+|a-page-of-playing-cards|||HTML5, CSS3 |
+|||||
 
 ## 🛠️ Technologies & Tools
 
