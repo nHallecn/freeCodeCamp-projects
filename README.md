@@ -34,8 +34,8 @@ To do list |A styled to-do list |  |HTML5,CSS3
 |design-a-contact-form| A contact form | |HTML5, CSS3 |
 |confidential-email| A contact form | |HTML5, CSS3 |
 |news paper article|||HTML5, CSS3 |
-|a-page-of-playing-cards|||HTML5, CSS3 |
-|||||
+|a-page-of-playing-cards|a-page-of-playing-cards||HTML5, CSS3 |
+|a tribute-page|a tribute-page||HTML5, CSS3|
 
 ## 🛠️ Technologies & Tools
 
@@ -59,6 +59,8 @@ I'm always open to connecting with other learners and developers. Feel free to r
 
 * **freeCodeCamp Profile**: [My Profile](https://www.freecodecamp.org/njihallecho-nkwenti)
 *  [LinkedIn](www.linkedin.com/in/nji-halle-cho-nkwenti-2b0a29334e])
+*  [X](https://x.com/ChoHalle)
+*  [Bluesky](https://bsky.app/profile/nhallecn.bsky.social)
 
 ---
 
