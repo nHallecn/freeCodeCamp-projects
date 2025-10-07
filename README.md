@@ -36,6 +36,7 @@ To do list |A styled to-do list |  |HTML5,CSS3
 |news paper article|||HTML5, CSS3 |
 |a-page-of-playing-cards|a-page-of-playing-cards||HTML5, CSS3 |
 |a tribute-page|a tribute-page||HTML5, CSS3|
+|lab-javascript-trivia-bot|lab-javascript-trivia-bot||JS
 
 ## 🛠️ Technologies & Tools
 
