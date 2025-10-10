@@ -1,0 +1,102 @@
+body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f0f5;
+            padding: 20px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #1a1a40;
+            margin-bottom: 25px;
+            font-size: 2.5em;
+        }
+
+        table {
+            width: 90%;
+            max-width: 1000px;
+            border-collapse: collapse;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 15px 20px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        thead tr {
+            background-image: linear-gradient(to right, #6bb6ff, #99ddff);
+            color: #1a1a40;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        tr[class="read"] {
+            background-image: linear-gradient(to right, #d9f3d9, #e6ffe6);
+        }
+
+        tr[class="to-read"] {
+            background-image: linear-gradient(to right, #ffe6e6, #fff0f0);
+        }
+
+        tr[class="in-progress"] {
+            background-image: linear-gradient(to right, #fff4d9, #fffaeb);
+        }
+
+        span {
+            display: inline-block;
+        }
+
+        span[class="status"],
+        span[class^="rate"] {
+            height: 25px;
+            width: 100px;
+            padding: 5px 15px;
+            border-radius: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        tr[class="to-read"] span[class="status"] {
+            color: #7b1d1d;
+            border: 1px solid #ff4d4d;
+            background-image: linear-gradient(to right, #ff8080, #ff4d4d);
+        }
+
+        tr[class="read"] span[class="status"] {
+            color: #1a5e20;
+            border: 1px solid #4caf50;
+            background-image: linear-gradient(to right, #81c784, #4caf50);
+        }
+
+        tr[class="in-progress"] span[class="status"] {
+            color: #8c6a1e;
+            border: 1px solid #ffc107;
+            background-image: linear-gradient(to right, #ffd760, #ffc107);
+        }
+
+        span[class^="rate"] > span{
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            margin: 0 2px;
+            height: 14px;
+            width: 14px;
+            background-color: #f0f0f5;
+        }
+
+        span[class~="one"] :first-child {
+    background-image: linear-gradient(to bottom, #ffd700, #ffc107);
+}
+
+        span[class~="two"] :nth-child(-n+2) {
+    background-image: linear-gradient(to bottom, #ffd700, #ffc107);
+}
+
+        span[class~="three"] span {
+            background-image: linear-gradient(to bottom, #ffd700, #ffc107);
+        }
