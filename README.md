@@ -16,20 +16,20 @@ The main purpose of this repository is to:
 Here is a list of the projects I have completed so far. Each project is located in its own directory within this repository.
 
 | Project Name                      | Description                                                  Technologies Used     |
-| --------------------------------- | ------------------------------------------------------------  --------------------- |
-|Book Catalog Table	                |A responsive table layout displaying a catalog of books.	                            |HTML5,             |
-|Business Card	                    |A simple and stylish digital business card component. 	                            |HTML5, CSS3
-|Hotel Feedback	                    |A web form designed for users to submit hotel feedback.	                           |HTML5, CSS3
-|Lab Event Hub	                    |An informational page or hub for lab-related events.	      	                         |HTML5,
-|Lab Multimedia Player	            |A custom-styled player for audio or video content.	                               |HTML5,  
-|Movie Review Page	                |A webpage designed to showcase a review for a movie.	                 |HTML5, 
-|Recipe Page	                    |A clean, well-structured page to display a recipe.	                  |HTML5, CSS3
-|Survey Form	                    |A responsive survey form with various input fields.	                     |HTML5, 
-|Travel Agency Page	                |A landing page for a fictional travel agency.	                            |HTML5, 
+| --------------------------------- | ------------------------------------------------------------  |--------------------- |
+|Book Catalog Table	                |A responsive table layout displaying a catalog of books.	 |HTML5,             |
+|Business Card	                    |A simple and stylish digital business card component.  |HTML5, CSS3
+|Hotel Feedback	                    |A web form designed for users to submit hotel feedback.	 |HTML5, CSS3
+|Lab Event Hub	                    |An informational page or hub for lab-related events.	   |HTML5,
+|Lab Multimedia Player	            |A custom-styled player for audio or video content.	|HTML5,  
+|Movie Review Page	                |A webpage designed to showcase a review for a movie.	  |HTML5, 
+|Recipe Page	                    |A clean, well-structured page to display a recipe.	 |HTML5, CSS3
+|Survey Form	                    |A responsive survey form with various input fields.	  |HTML5, 
+|Travel Agency Page	                |A landing page for a fictional travel agency.  |HTML5, 
 |Video Compilation Page | A video compilation page |HTML5
 To do list |A styled to-do list  |HTML5,CSS3
 |Blog post card | Styled blog-post card|HTML5, CSS3
-|Event flyer                    |A clean, well-structured page displaying an event details.	                   |HTML5, CSS3
+|Event flyer                    |A clean, well-structured page displaying an event details. |HTML5, CSS3
 |set-of-colored-boxes| A set of colored boxes styled with css|HTML5, CSS3 |
 |design-a-contact-form| A contact form |HTML5, CSS3 |
 |confidential-email| A contact form |HTML5, CSS3 |
