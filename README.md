@@ -15,8 +15,8 @@ The main purpose of this repository is to:
 
 Here is a list of the projects I have completed so far. Each project is located in its own directory within this repository.
 
-| Project Name                      | Description                                                  Technologies Used     |
-| --------------------------------- | ------------------------------------------------------------  |--------------------- |
+| Project Name                      | Description                                                 | Technologies Used     |
+| --------------------------------- | ------------------------------------------------------------ |--------------------- |
 |Book Catalog Table	                |A responsive table layout displaying a catalog of books.	 |HTML5,             |
 |Business Card	                    |A simple and stylish digital business card component.  |HTML5, CSS3
 |Hotel Feedback	                    |A web form designed for users to submit hotel feedback.	 |HTML5, CSS3
