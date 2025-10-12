@@ -37,8 +37,9 @@ To do list |A styled to-do list  |HTML5,CSS3
 |a-page-of-playing-cards|a-page-of-playing-cards|HTML5, CSS3 |
 |a tribute-page|a tribute-page|HTML5, CSS3|
 |lab-javascript-trivia-bot|lab-javascript-trivia-bot|JS
-|a book inventory|a bok inventory|HTML5, CSS3|
+|a book inventory|a book inventory|HTML5, CSS3|
 |lab-sentence-maker|lab-sentence-maker|JS
+|technical-documentation-page|technical-documentation-page|HTML5, CSS3|
 
 ## 🛠️ Technologies & Tools
 
