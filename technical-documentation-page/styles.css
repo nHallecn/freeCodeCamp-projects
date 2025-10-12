@@ -1,0 +1,106 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Helps with layout */
+}
+
+/* 12. nav element with id="navbar" */
+#navbar {
+    position: fixed; /* 21. #navbar should always be visible */
+    top: 0;
+    left: 0;
+    width: 300px; /* Width for the navbar */
+    height: 100%;
+    border-right: 3px solid #ccc;
+    background-color: #f7f7f7;
+    padding: 20px 0;
+    box-sizing: border-box;
+    overflow-y: auto; /* Allows scrolling if content is too long */
+}
+
+/* 13. Header inside the navbar */
+#navbar header {
+    font-size: 1.5em;
+    padding: 15px 10px;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 14. Link elements with class of nav-link */
+.nav-link {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #444;
+    border-top: 1px solid #ddd;
+    transition: background-color 0.3s;
+}
+
+.nav-link:last-of-type {
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-link:hover {
+    background-color: #e0e0e0;
+    color: #000;
+}
+
+/* 1. main element with id="main-doc" */
+#main-doc {
+    margin-left: 320px; /* Offset the main content to the right of the fixed navbar (300px + some padding) */
+    padding: 20px;
+    padding-bottom: 100px; /* Extra padding for viewing the bottom sections */
+}
+
+/* .main-section styles */
+.main-section {
+    margin-bottom: 40px;
+}
+
+/* Header inside main-section */
+.main-section header {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #007bff;
+    border-bottom: 1px solid #007bff;
+    padding-bottom: 5px;
+}
+
+/* Code block styles */
+code {
+    display: block;
+    text-align: left;
+    white-space: pre-line;
+    position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    background-color: #eee;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-family: monospace;
+}
+
+/* 22. Your technical documentation should use at least one media query. */
+/* This media query adjusts the layout for smaller devices (e.g., mobile phones) */
+@media (max-width: 860px) {
+    /* On small screens, change navbar from fixed left to full-width top */
+    #navbar {
+        position: static; /* Change from fixed to static */
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 3px solid #ccc;
+    }
+
+    /* Remove the left margin so main-doc uses the full width */
+    #main-doc {
+        margin-left: 0;
+        padding-top: 20px;
+    }
+}
