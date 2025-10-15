@@ -40,6 +40,7 @@ To do list |A styled to-do list  |HTML5,CSS3
 |a book inventory|a book inventory|HTML5, CSS3|
 |lab-sentence-maker|lab-sentence-maker|JS
 |technical-documentation-page|technical-documentation-page|HTML5, CSS3|
+|fortune-teller|fortune-teller|JS
 
 ## 🛠️ Technologies & Tools
 
