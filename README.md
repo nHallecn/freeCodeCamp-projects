@@ -17,7 +17,7 @@ Here is a list of the projects I have completed so far. Each project is located 
 
 | Project Name                      | Description                                                 | Technologies Used     |
 | --------------------------------- | ------------------------------------------------------------ |--------------------- |
-|Book Catalog Table	                |A responsive table layout displaying a catalog of books.	 |HTML5,             |
+|Book Catalog Table	                |A responsive table layout displaying a catalog of books.	 |HTML5          |
 |Business Card	                    |A simple and stylish digital business card component.  |HTML5, CSS3
 |Hotel Feedback	                    |A web form designed for users to submit hotel feedback.	 |HTML5, CSS3
 |Lab Event Hub	                    |An informational page or hub for lab-related events.	   |HTML5,
@@ -41,6 +41,8 @@ To do list |A styled to-do list  |HTML5,CSS3
 |lab-sentence-maker|lab-sentence-maker|JS
 |technical-documentation-page|technical-documentation-page|HTML5, CSS3|
 |fortune-teller|fortune-teller|JS
+|boolean-check-function|boolean-check-function|JS
+|email-masker|email-masker|JS
 
 ## 🛠️ Technologies & Tools
 
