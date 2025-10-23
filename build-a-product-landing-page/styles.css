@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    padding-top: 80px; /* Space for the fixed header */
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* HEADER & NAVBAR (Tests 23, 25) */
+#header {
+    display: flex; /* CSS FLEXBOX for Header (Test 25) */
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #1C77C3; /* Primary Color */
+    color: white;
+    position: fixed; /* Always at the top (Test 23) */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays on top */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#header-img {
+    height: 50px;
+    min-width: 200px;
+}
+
+#nav-bar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 10px 0;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+#nav-bar a:hover {
+    color: #FFD700; /* Accent Color */
+}
+
+/* HERO SECTION */
+#hero {
+    padding: 80px 20px;
+    background-color: #E6F3FF;
+    text-align: center;
+}
+
+#hero h1 {
+    font-size: 2.5em;
+    color: #1C77C3;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#email {
+    padding: 10px;
+    width: 300px;
+    max-width: 80%;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#submit {
+    padding: 10px 20px;
+    background-color: #1C77C3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#submit:hover {
+    background-color: #165c97;
+}
+
+/* FEATURES SECTION */
+.feature-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.feature-item {
+    flex-basis: 30%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-item h3 {
+    color: #1C77C3;
+    margin-bottom: 10px;
+}
+
+/* DEMO SECTION */
+#demo {
+    background-color: #fff;
+}
+
+#video {
+    max-width: 100%;
+    height: auto;
+    margin-top: 30px;
+}
+
+/* PRICING SECTION (Test 25) */
+.flex-container {
+    display: flex; /* CSS FLEXBOX for Pricing Tiers (Test 25) */
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.price-tier {
+    flex-basis: 300px; /* Base width for each tier */
+    border: 2px solid #1C77C3;
+    border-radius: 10px;
+    padding: 25px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.price-tier h3 {
+    background-color: #1C77C3;
+    color: white;
+    padding: 15px 0;
+    margin: -25px -25px 20px -25px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.price-tag {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #1C77C3;
+    margin-bottom: 20px;
+}
+
+.price-tier ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.price-tier li {
+    padding: 8px 0;
+    border-bottom: 1px dotted #ccc;
+}
+
+.price-tier li:last-child {
+    border-bottom: none;
+}
+
+.price-tier button {
+    padding: 10px 30px;
+    background-color: #FFD700; /* Accent Color */
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.price-tier button:hover {
+    background-color: #e6c500;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    /* Stack the features and pricing tiers vertically */
+    .feature-grid, .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item, .price-tier {
+        flex-basis: 90%;
+        max-width: 400px;
+    }
+
+   
+    #header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    #header-img {
+        margin-bottom: 10px;
+    }
+
+    #nav-bar {
+        margin-top: 5px;
+    }
+
+    #nav-bar a {
+        margin: 0 10px;
+    }
+
+    body {
+        padding-top: 130px; 
+    }
+}

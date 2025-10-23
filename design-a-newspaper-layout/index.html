@@ -1,0 +1,173 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tech Chronicle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="newspaper-layout">
+        <header class="title">
+            <h1>The Tech Chronicle</h1>
+        </header>
+
+        <article class="feature-article">
+            <h2>Quantum Leap Achieved: New Processor Speeds Unlocked</h2>
+            <p>
+                In a groundbreaking development, researchers have unveiled a new quantum processor that promises to revolutionize computing. This advancement moves beyond traditional binary limitations, offering exponential increases in processing power. Experts predict this technology could be integrated into consumer electronics within the next decade, transforming everything from AI to data security. The implications for the global tech landscape are immense.
+            </p>
+        </article>
+
+        <figure class="cover-image">
+            <img src="https://via.placeholder.com/400x600/333333/FFFFFF?text=Quantum+Processor" alt="A stylized image representing a quantum processor.">
+        </figure>
+
+        <article class="secondary-article">
+            <h2>The Rise of Decentralized Finance: A Look at Web3's Impact</h2>
+            <p>
+                Decentralized Finance (DeFi) continues its rapid expansion, challenging conventional banking systems. This section explores how Web3 technologies are underpinning this shift, focusing on smart contracts and blockchain's role in creating secure, transparent financial services. The future of money is being rewritten, and major financial institutions are starting to take notice and adapt their strategies.
+            </p>
+        </article>
+        
+        <article class="small-article1">
+            <h3>Cybersecurity Alert: New Global Threat Identified</h3>
+            <p>
+                A sophisticated new malware variant is targeting industrial control systems. Security firms are advising immediate patching and enhanced network monitoring.
+            </p>
+        </article>
+
+        <article class="small-article2">
+            <h3>AI Ethics Debate Intensifies in Silicon Valley</h3>
+            <p>
+                The ongoing conversation about the ethical implications of advanced Artificial Intelligence reached a fever pitch this week, with new calls for regulatory oversight.
+            </p>
+        </article>
+        
+        <article class="small-article3">
+            <h3>SpaceX Launches Record-Breaking Satellite Constellation</h3>
+            <p>
+                Space exploration continues to accelerate as a private company successfully deploys its largest array of communication satellites to date, improving global connectivity.
+            </p>
+        </article>
+    </main>
+</body>
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Times New Roman', serif;
+    font-size: 3em;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 5px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    letter-spacing: 5px;
+}
+
+h2 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 1.8em;
+    color: #000;
+    margin-top: 0;
+}
+
+h3 {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2em;
+    color: #444;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 5px;
+}
+
+article, header, figure {
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* CSS Grid Layout */
+.newspaper-layout {
+    display: grid;
+    /* Divide the space into three equal columns */
+    grid-template-columns: repeat(3, 1fr);
+    /* Rows:
+    1. auto (for the title)
+    2. 1fr (equal share of remaining space)
+    3. 1fr
+    4. 1fr 
+    */
+    grid-template-rows: auto 1fr 1fr 1fr;
+    
+    /* Define the arrangement of sections across the grid */
+    grid-template-areas:
+        "title title title"
+        "feature-article feature-article cover-image"
+        "secondary-article secondary-article cover-image"
+        "small-article1 small-article2 small-article3";
+    
+    /* Add a gap between grid items */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Grid Area Assignments (Fulfilling Tests 20-26) */
+.title {
+    grid-area: title;
+}
+
+.feature-article {
+    grid-area: feature-article;
+}
+
+.cover-image {
+    grid-area: cover-image;
+    /* Center image content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure image doesn't bleed */
+}
+
+.secondary-article {
+    grid-area: secondary-article;
+}
+
+.small-article1 {
+    grid-area: small-article1;
+}
+
+.small-article2 {
+    grid-area: small-article2;
+}
+
+.small-article3 {
+    grid-area: small-article3;
+}
+
+
+.cover-image img {
+    width: 100%; 
+    height: auto;
+    display: block;
+    max-width: 100%;
+}
+
+** end of styles.css **
+
