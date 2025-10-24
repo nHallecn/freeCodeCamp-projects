@@ -43,6 +43,8 @@ To do list |A styled to-do list  |HTML5,CSS3
 |fortune-teller|fortune-teller|JS
 |boolean-check-function|boolean-check-function|JS
 |email-masker|email-masker|JS
+|product-landing-page|a-product-landing-page|HTML5, CSS3|
+|design-a-newspaper-layout|design-a-newspaper-layout|HTML5, CSS3|
 
 ## 🛠️ Technologies & Tools
 
@@ -66,7 +68,7 @@ This curriculum covers a wide range of modern web development technologies. The 
 I'm always open to connecting with other learners and developers. Feel free to reach out!
 
 * **freeCodeCamp Profile**: [My Profile](https://www.freecodecamp.org/njihallecho-nkwenti)
-*  [LinkedIn](www.linkedin.com/in/nji-halle-cho-nkwenti-2b0a29334e])
+*  [LinkedIn](www.linkedin.com/in/nji-halle-cho-nkwenti])
 *  [X](https://x.com/ChoHalle)
 *  [Bluesky](https://bsky.app/profile/nhallecn.bsky.social)
 
