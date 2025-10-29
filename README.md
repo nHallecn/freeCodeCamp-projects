@@ -48,6 +48,7 @@ To do list |A styled to-do list  |HTML5,CSS3
 |functions in JavaScript|functions in JavaScript|JS
 |loops in JavaScript|loops in JavaScript|JS
 |build-a-moon-orbit|build-a-moon-orbit|HTML5, CSS3|
+|loops in JavaScript|loops in JavaScript|JS
 
 
 ## 🛠️ Technologies & Tools
