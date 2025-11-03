@@ -50,6 +50,7 @@ To do list |A styled to-do list  |HTML5,CSS3
 |build-a-moon-orbit|build-a-moon-orbit|HTML5, CSS3|
 |loops in JavaScript|loops in JavaScript|JS
 |higher order functions|higher order functions|JS
+|favorite icon picker|favorite icon picker|HTML5, CSS3, JS|
 
 
 ## 🛠️ Technologies & Tools
