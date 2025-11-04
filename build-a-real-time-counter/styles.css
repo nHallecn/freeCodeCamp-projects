@@ -1,0 +1,38 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial, san-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(180deg, white, black 200%);
+  color: rgb(54, 51, 51);
+}
+
+.container{
+  background: white;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+h1{
+  margin-bottom: 15px;
+}
+
+textarea{
+  width: 95%;
+  height: 200px;
+  padding: 10px;
+}
+
+p{
+  padding: 10px;
+}
