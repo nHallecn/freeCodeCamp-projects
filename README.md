@@ -17,12 +17,12 @@ Here is a list of the projects I have completed so far. Each project is located 
 
 | Project Name                      | Description                                                 | Technologies Used     |
 | --------------------------------- | ------------------------------------------------------------ |--------------------- |
-|Book Catalog Table	                |A responsive table layout displaying a catalog of books.	 |HTML5          |
-|Business Card	                    |A simple and stylish digital business card component.  |HTML5, CSS3
-|Hotel Feedback	                    |A web form designed for users to submit hotel feedback.	 |HTML5, CSS3
-|Lab Event Hub	                    |An informational page or hub for lab-related events.	   |HTML5,
-|Lab Multimedia Player	            |A custom-styled player for audio or video content.	|HTML5,  
-|Movie Review Page	                |A webpage designed to showcase a review for a movie.	  |HTML5, 
+|Book Catalog Table	   |A responsive table layout displaying a catalog of books.	 |HTML5          |
+|Business Card	  |A simple and stylish digital business card component.  |HTML5, CSS3
+|Hotel Feedback|A web form designed for users to submit hotel feedback.	 |HTML5, CSS3
+|Lab Event Hub	|An informational page or hub for lab-related events.	   |HTML5,
+|Lab Multimedia Player|A custom-styled player for audio or video content.	|HTML5,  
+|Movie Review Page|A webpage designed to showcase a review for a movie.	  |HTML5, 
 |Recipe Page	                    |A clean, well-structured page to display a recipe.	 |HTML5, CSS3
 |Survey Form	                    |A responsive survey form with various input fields.	  |HTML5, 
 |Travel Agency Page	                |A landing page for a fictional travel agency.  |HTML5, 
