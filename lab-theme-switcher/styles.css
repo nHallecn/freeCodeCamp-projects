@@ -1,1 +1,71 @@
+body {
+    transition: background-color 0.3s, color 0.3s;
+    font-family: sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.theme-switcher-container {
+    position: relative;
+}
+
+#theme-switcher-button {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#theme-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
+    list-style: none;
+    padding: 0;
+    margin-left: 0;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    min-width: 150px;
+    border-radius: 4px;
+}
+
+#theme-dropdown[hidden] {
+    display: none;
+}
+
+#theme-dropdown li {
+    padding: 8px 15px;
+    cursor: pointer;
+    color: #333;
+}
+
+#theme-dropdown li:hover {
+    background-color: #f0f0f0;
+}
+
+.theme-light {
+    background-color: #f7f7f7;
+    color: #333;
+}
+.theme-dark {
+    background-color: #333;
+    color: #f7f7f7;
+}
+.theme-green {
+    background-color: #2e8b57;
+    color: #fff;
+}
+
+.status-message {
+    margin-top: 20px;
+    font-size: 1.1em;
+}
 
