@@ -1,0 +1,173 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Switcher</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-light">
+
+    <div class="theme-switcher-container">
+        <button
+            id="theme-switcher-button"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="theme-dropdown"
+        >
+            Switch Theme
+        </button>
+
+        <ul
+            id="theme-dropdown"
+            role="menu"
+            aria-labelledby="theme-switcher-button"
+            hidden
+        >
+            <li role="menuitem" id="theme-light">Light</li>
+            <li role="menuitem" id="theme-dark">Dark</li>
+            <li role="menuitem" id="theme-green">Green</li>
+        </ul>
+    </div>
+
+    <div id="status-message" aria-live="polite" class="status-message">Theme switched to Bright Light mode.</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+
+body {
+    transition: background-color 0.3s, color 0.3s;
+    font-family: sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.theme-switcher-container {
+    position: relative;
+}
+
+#theme-switcher-button {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#theme-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
+    list-style: none;
+    padding: 0;
+    margin-left: 0;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    min-width: 150px;
+    border-radius: 4px;
+}
+
+#theme-dropdown[hidden] {
+    display: none;
+}
+
+#theme-dropdown li {
+    padding: 8px 15px;
+    cursor: pointer;
+    color: #333;
+}
+
+#theme-dropdown li:hover {
+    background-color: #f0f0f0;
+}
+
+.theme-light {
+    background-color: #f7f7f7;
+    color: #333;
+}
+.theme-dark {
+    background-color: #333;
+    color: #f7f7f7;
+}
+.theme-green {
+    background-color: #2e8b57;
+    color: #fff;
+}
+
+.status-message {
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+** end of styles.css **
+
+** start of script.js **
+
+const themes = [
+    { name: "light", message: "Theme switched to Bright Light mode." },
+    { name: "dark", message: "Theme switched to Classic Dark mode." },
+    { name: "green", message: "Theme switched to soothing Forest Green." }
+];
+
+const themeSwitcherButton = document.getElementById("theme-switcher-button");
+const themeDropdown = document.getElementById("theme-dropdown");
+const statusMessageEl = document.getElementById("status-message");
+const bodyEl = document.body;
+const themeItems = themeDropdown.querySelectorAll("li[role='menuitem']");
+
+const toggleDropdown = () => {
+    const isExpanded = themeSwitcherButton.getAttribute("aria-expanded") === "true";
+    
+    if (isExpanded) {
+        themeDropdown.setAttribute("hidden", "");
+        themeSwitcherButton.setAttribute("aria-expanded", "false");
+    } else {
+        themeDropdown.removeAttribute("hidden");
+        themeSwitcherButton.setAttribute("aria-expanded", "true");
+    }
+};
+
+const switchTheme = (themeName) => {
+    const selectedTheme = themes.find(t => t.name === themeName);
+    
+    if (selectedTheme) {
+        themes.forEach(t => bodyEl.classList.remove(`theme-${t.name}`));
+        
+
+        bodyEl.classList.add(`theme-${selectedTheme.name}`);
+
+        statusMessageEl.textContent = selectedTheme.message;
+
+        themeDropdown.setAttribute("hidden", "");
+        themeSwitcherButton.setAttribute("aria-expanded", "false");
+    }
+};
+
+themeSwitcherButton.addEventListener("click", toggleDropdown);
+
+themeItems.forEach(item => {
+    item.addEventListener("click", (event) => {
+        const themeId = event.target.id;
+ 
+        const themeName = themeId.replace("theme-", ""); 
+        switchTheme(themeName);
+    });
+});
+
+** end of script.js **
+
