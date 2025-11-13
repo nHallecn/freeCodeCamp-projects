@@ -1,4 +1,3 @@
-** start of script.js **
 
 function myReplace(str, before, after) {
   if (before[0] === before[0].toUpperCase()) {
@@ -9,7 +8,3 @@ function myReplace(str, before, after) {
 
   return str.replace(before, after);
 }
-
-
-** end of script.js **
-
