@@ -57,6 +57,7 @@ To do list |A styled to-do list  |HTML5,CSS3
 |build-a-customer-complaint-form|build-a-customer-complaint-form|HTML5, CSS3, JS|
 |build-a-markdown-to-html-converter|build-a-markdown-to-html-converter|HTML5, CSS3, JS|
 |build-a-palindrome-checker|build-a-palindrome-checker|HTML5, CSS3, JS|
+|lab-date-conversion |lab-date-conversion|JS
 
 ## 🛠️ Technologies & Tools
 
