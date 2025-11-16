@@ -1,5 +1,3 @@
-** start of script.js **
-
 function translatePigLatin(str) {
   const vowelRegex = /^[aeiou]/;
   if (vowelRegex.test(str)) {
@@ -13,7 +11,3 @@ function translatePigLatin(str) {
 
   return str.slice(firstVowelIndex) + str.slice(0, firstVowelIndex) + "ay";
 }
-
-
-** end of script.js **
-
