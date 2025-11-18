@@ -1,4 +1,3 @@
-** start of script.js **
 
 const questions = [
   {
@@ -52,6 +51,3 @@ function getResults(question, computerChoice) {
     return `The computer's choice is wrong. The correct answer is: ${correctAnswer}`;
   }
 }
-
-** end of script.js **
-
