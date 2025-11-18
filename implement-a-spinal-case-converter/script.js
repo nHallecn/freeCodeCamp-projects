@@ -1,5 +1,3 @@
-** start of script.js **
-
 function spinalCase(str) {
   return str
     .replace(/([a-z])([A-Z])/g, "$1 $2")
@@ -7,6 +5,4 @@ function spinalCase(str) {
     .toLowerCase();
 }
 
-
-** end of script.js **
 
