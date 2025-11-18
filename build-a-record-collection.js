@@ -1,5 +1,3 @@
-** start of script.js **
-
 const recordCollection = {
   2548: {
     albumTitle: 'Slippery When Wet',
@@ -49,6 +47,3 @@ updateRecords(recordCollection, 2468, 'artist', '');
 
 console.log("\nFinal Updated Collection:");
 console.log(JSON.stringify(recordCollection, null, 2));
-
-** end of script.js **
-
