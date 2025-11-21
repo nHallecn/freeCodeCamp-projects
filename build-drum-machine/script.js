@@ -1,28 +1,6 @@
 ** start of index.html **
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FCC Drum Machine</title>
-    <link rel="stylesheet" href="styles.css"> 
-</head>
-<body>
 
-    <div id="drum-machine">
-        
-        <p id="display">Play a Pad</p>
-
-        <div id="pad-bank">
-            </div>
-    </div>
-
-    <script src="script.js"></script>
-
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-</body>
-</html>
 
 ** end of index.html **
 
