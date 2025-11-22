@@ -61,6 +61,3 @@ document.addEventListener('keydown', (event) => {
         playClip(validClip.key, validClip.id);
     }
 });
-
-** end of script.js **
-
