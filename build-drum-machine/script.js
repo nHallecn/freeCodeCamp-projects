@@ -1,9 +1,6 @@
 ** start of index.html **
 
 
-
-** end of index.html **
-
 const audioClips = [
     { key: 'Q', id: 'Heater 1', fileName: 'Heater-1.mp3' },
     { key: 'W', id: 'Heater 2', fileName: 'Heater-2.mp3' },
