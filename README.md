@@ -59,7 +59,7 @@ To do list |A styled to-do list  |HTML5,CSS3
 |build-a-palindrome-checker|build-a-palindrome-checker|HTML5, CSS3, JS|
 |lab-date-conversion |lab-date-conversion|JS
 |lab-theme switcher | lab-theme switcher |JS
-|||HTML5, CSS3, JS
+|build-a-bookmark-manager-app|build-a-bookmark-manager-app|HTML5, CSS3, JS
 |||HTML5, CSS3, JS
 ## 🛠️ Technologies & Tools
 
