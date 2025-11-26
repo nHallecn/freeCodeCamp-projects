@@ -1,5 +1,3 @@
-** start of script.js **
-
 class BankAccount{
   constructor(){
     this.balance=0;
@@ -50,6 +48,3 @@ myAccount.withdraw(50);
 myAccount.deposit(30);
 myAccount.withdraw(20);
 myAccount.deposit(60);
-
-** end of script.js **
-
