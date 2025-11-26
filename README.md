@@ -60,7 +60,7 @@ To do list |A styled to-do list  |HTML5,CSS3
 |lab-date-conversion |lab-date-conversion|JS
 |lab-theme switcher | lab-theme switcher |JS
 |build-a-bookmark-manager-app|build-a-bookmark-manager-app|HTML5, CSS3, JS
-|||HTML5, CSS3, JS
+|build-a-bank-account-management-program|build-a-bank-account-management-program|HTML5, CSS3, JS
 |||HTML5, CSS3, JS
 |||HTML5, CSS3, JS
 ## 🛠️ Technologies & Tools
