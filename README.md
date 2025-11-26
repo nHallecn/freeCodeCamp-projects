@@ -61,6 +61,8 @@ To do list |A styled to-do list  |HTML5,CSS3
 |lab-theme switcher | lab-theme switcher |JS
 |build-a-bookmark-manager-app|build-a-bookmark-manager-app|HTML5, CSS3, JS
 |||HTML5, CSS3, JS
+|||HTML5, CSS3, JS
+|||HTML5, CSS3, JS
 ## 🛠️ Technologies & Tools
 
 This curriculum covers a wide range of modern web development technologies. The main tools I am using throughout these projects include:
