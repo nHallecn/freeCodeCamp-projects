@@ -1,5 +1,3 @@
-** start of script.js **
-
 const projectStatus = {
   PENDING: {description: "Pending Execution"},
   SUCCESS: {description: "Executed Successfully"},
