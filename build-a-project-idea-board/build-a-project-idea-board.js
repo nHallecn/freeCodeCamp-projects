@@ -42,8 +42,3 @@ class ProjectIdeaBoard{
 }
 
 }
-
-
-
-** end of script.js **
-
