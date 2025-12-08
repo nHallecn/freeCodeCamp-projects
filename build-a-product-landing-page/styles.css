@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -120,7 +121,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* DEMO SECTION */
 #demo {
     background-color: #fff;
 }
@@ -131,16 +131,15 @@ body {
     margin-top: 30px;
 }
 
-/* PRICING SECTION (Test 25) */
 .flex-container {
-    display: flex; /* CSS FLEXBOX for Pricing Tiers (Test 25) */
+    display: flex; 
     justify-content: center;
     gap: 30px;
     margin-top: 40px;
 }
 
 .price-tier {
-    flex-basis: 300px; /* Base width for each tier */
+    flex-basis: 300px;
     border: 2px solid #1C77C3;
     border-radius: 10px;
     padding: 25px;
@@ -182,7 +181,7 @@ body {
 
 .price-tier button {
     padding: 10px 30px;
-    background-color: #FFD700; /* Accent Color */
+    background-color: #FFD700; 
     color: #333;
     border: none;
     border-radius: 5px;
@@ -195,7 +194,6 @@ body {
     background-color: #e6c500;
 }
 
-/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
@@ -204,8 +202,8 @@ footer {
     font-size: 0.9em;
 }
 
+/* MEDIA QUERY (Test 24) */
 @media (max-width: 768px) {
-    /* Stack the features and pricing tiers vertically */
     .feature-grid, .flex-container {
         flex-direction: column;
         align-items: center;
@@ -216,7 +214,7 @@ footer {
         max-width: 400px;
     }
 
-   
+    /* Adjust the header layout for smaller screens */
     #header {
         flex-direction: column;
         text-align: center;
@@ -239,3 +237,5 @@ footer {
         padding-top: 130px; 
     }
 }
+
+
