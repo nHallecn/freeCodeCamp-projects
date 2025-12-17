@@ -1,0 +1,325 @@
+** start of index.html **
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fCC Forum Leaderboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img
+          class="fcc-logo"
+          src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg"
+          alt="freeCodeCamp logo"
+        />
+      </nav>
+      <h1 class="title">Latest Topics</h1>
+    </header>
+    <main>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th id="topics">Topics</th>
+              <th id="avatars">Avatars</th>
+              <th id="replies">Replies</th>
+              <th id="views">Views</th>
+              <th id="activity">Activity</th>
+            </tr>
+          </thead>
+          <tbody id="posts-container"></tbody>
+        </table>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-bg-color: #2a2a40;
+  --black: #000;
+  --dark-navy: #0a0a23;
+  --dark-grey: #d0d0d5;
+  --medium-grey: #dfdfe2;
+  --light-grey: #f5f6f7;
+  --peach: #f28373;
+  --salmon-color: #f0aea9;
+  --light-blue: #8bd9f6;
+  --light-orange: #f8b172;
+  --light-green: #93cb5b;
+  --golden-yellow: #f1ba33;
+  --gold: #f9aa23;
+  --green: #6bca6b;
+}
+
+body {
+  background-color: var(--main-bg-color);
+}
+
+nav {
+  background-color: var(--dark-navy);
+  padding: 10px 0;
+}
+
+.fcc-logo {
+  width: 210px;
+  display: block;
+  margin: auto;
+}
+
+.title {
+  margin: 25px 0;
+  text-align: center;
+  color: var(--light-grey);
+}
+
+.table-wrapper {
+  padding: 0 25px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  color: var(--dark-grey);
+  margin: auto;
+  table-layout: fixed;
+  border-collapse: collapse;
+  overflow-x: scroll;
+}
+
+#topics {
+  text-align: start;
+  width: 60%;
+}
+
+th {
+  border-bottom: 2px solid var(--dark-grey);
+  padding-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+td:not(:first-child) {
+  text-align: center;
+}
+
+td {
+  border-bottom: 1px solid var(--dark-grey);
+  padding: 20px 0;
+}
+
+.post-title {
+  font-size: 1.2rem;
+  color: var(--medium-grey);
+  text-decoration: none;
+}
+
+.category {
+  padding: 3px;
+  color: var(--black);
+  text-decoration: none;
+  display: block;
+  width: fit-content;
+  margin: 10px 0 10px;
+}
+
+.career {
+  background-color: var(--salmon-color);
+}
+
+.feedback,
+.html-css {
+  background-color: var(--light-blue);
+}
+
+.support {
+  background-color: var(--light-orange);
+}
+
+.general {
+  background-color: var(--light-green);
+}
+
+.javascript {
+  background-color: var(--golden-yellow);
+}
+
+.backend {
+  background-color: var(--gold);
+}
+
+.python {
+  background-color: var(--green);
+}
+
+.motivation {
+  background-color: var(--peach);
+}
+
+.avatar-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.avatar-container img {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 750px) {
+  .table-wrapper {
+    padding: 0 15px;
+  }
+
+  table {
+    width: 700px;
+  }
+
+  th {
+    font-size: 1.2rem;
+  }
+
+  .post-title {
+    font-size: 1.1rem;
+  }
+}
+
+** end of styles.css **
+
+** start of script.js **
+
+const forumLatest =
+  'https://cdn.freecodecamp.org/curriculum/forum-latest/latest.json';
+const forumTopicUrl = 'https://forum.freecodecamp.org/t/';
+const forumCategoryUrl = 'https://forum.freecodecamp.org/c/';
+const avatarUrl = 'https://cdn.freecodecamp.org/curriculum/forum-latest';
+
+const allCategories = {
+  299: { category: 'Career Advice', className: 'career' },
+  409: { category: 'Project Feedback', className: 'feedback' },
+  417: { category: 'freeCodeCamp Support', className: 'support' },
+  421: { category: 'JavaScript', className: 'javascript' },
+  423: { category: 'HTML - CSS', className: 'html-css' },
+  424: { category: 'Python', className: 'python' },
+  432: { category: 'You Can Do This!', className: 'motivation' },
+  560: { category: 'Backend Development', className: 'backend' }
+};
+
+function timeAgo(timestamp) {
+  const now = new Date();
+  const past = new Date(timestamp);
+  const diffMs = now - past;
+
+  const minutes = Math.floor(diffMs / (1000 * 60));
+  const hours = Math.floor(diffMs / (1000 * 60 * 60));
+  const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+  if (minutes < 60) {
+    return `${minutes}m ago`;
+  }
+
+  if (hours < 24) {
+    return `${hours}h ago`;
+  }
+
+  return `${days}d ago`;
+}
+
+function viewCount(views) {
+  if (views >= 1000) {
+    return `${Math.floor(views / 1000)}k`;
+  }
+  return views;
+}
+
+function forumCategory(id) {
+  const categoryData = allCategories[id] || {
+    category: 'General',
+    className: 'general'
+  };
+
+  return `<a class="category ${categoryData.className}" href="${forumCategoryUrl}${categoryData.className}/${id}">${categoryData.category}</a>`;
+}
+
+
+function avatars(posters, users) {
+  return posters
+    .map(poster => {
+      const user = users.find(u => u.id === poster.user_id);
+
+      let avatar = user.avatar_template.replace('{size}', 30);
+
+      if (avatar.startsWith('/')) {
+        avatar = `${avatarUrl}${avatar}`;
+      }
+
+      return `<img src="${avatar}" alt="${user.name}">`;
+    })
+    .join('');
+}
+
+
+function showLatestPosts(data) {
+  const { users, topic_list } = data;
+  const { topics } = topic_list;
+
+  const rows = topics
+    .map(topic => {
+      return `
+        <tr>
+          <td>
+            <a
+              class="post-title"
+              href="${forumTopicUrl}${topic.slug}/${topic.id}"
+            >
+              ${topic.title}
+            </a>
+            ${forumCategory(topic.category_id)}
+          </td>
+          <td>
+            <div class="avatar-container">
+              ${avatars(topic.posters, users)}
+            </div>
+          </td>
+          <td>${topic.posts_count - 1}</td>
+          <td>${viewCount(topic.views)}</td>
+          <td>${timeAgo(topic.bumped_at)}</td>
+        </tr>
+      `;
+    })
+    .join('');
+
+  document.getElementById('posts-container').innerHTML = rows;
+}
+
+async function fetchData() {
+  try {
+    const response = await fetch(forumLatest);
+    const data = await response.json();
+    showLatestPosts(data);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+fetchData();
+
+
+** end of script.js **
+
