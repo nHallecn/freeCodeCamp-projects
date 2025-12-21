@@ -1,0 +1,244 @@
+** start of index.html **
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <div class="app-container">
+      <h1>Weather Dashboard</h1>
+
+      <select id="city-select">
+        <option value=""></option>
+        <option value="new york">New York</option>
+        <option value="los angeles">Los Angeles</option>
+        <option value="chicago">Chicago</option>
+        <option value="paris">Paris</option>
+        <option value="tokyo">Tokyo</option>
+        <option value="london">London</option>
+      </select>
+
+      <button id="get-weather-btn">Check Weather</button>
+
+      <div id="weather-info">
+        <h2 id="location"></h2>
+        <img id="weather-icon" alt="" />
+        <span id="weather-main"></span>
+
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-label">Temperature</span>
+            <span class="stat-value"><span id="main-temperature"></span>°C</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Feels Like</span>
+            <span class="stat-value"><span id="feels-like"></span>°C</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Humidity</span>
+            <span class="stat-value"><span id="humidity"></span>%</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Wind Speed</span>
+            <span class="stat-value"><span id="wind"></span> m/s</span>
+          </div>
+          <div class="stat-item" style="grid-column: span 2;">
+            <span class="stat-label">Wind Gust</span>
+            <span class="stat-value"><span id="wind-gust"></span> m/s</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+:root {
+  --primary-blue: #007bff;
+  --bg-gradient: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --text-dark: #333;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg-gradient);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-container {
+  background: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+h1 {
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+/* Form Styling */
+select, button {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+button {
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Weather Results Area */
+#location {
+  margin: 20px 0 5px 0;
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+#weather-icon {
+  width: 120px;
+  height: 120px;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+}
+
+#weather-main {
+  font-size: 1.2rem;
+  color: #666;
+  display: block;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.stat-item {
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #f0f0f0;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-weight: 700;
+  color: var(--text-dark);
+  font-size: 1.1rem;
+}
+
+** end of styles.css **
+
+** start of script.js **
+
+const citySelect = document.getElementById("city-select");
+const getWeatherBtn = document.getElementById("get-weather-btn");
+
+async function getWeather(city) {
+  try {
+    const response = await fetch(`https://weather-proxy.freecodecamp.rocks/api/city/${city}`);
+    
+    // Crucial for passing the Error tests:
+    // fetch does not throw on 404, so we must check response.ok
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(error);
+    // Explicitly return nothing/undefined so showWeather knows it failed
+    return null; 
+  }
+}
+
+async function showWeather(city) {
+  const data = await getWeather(city);
+
+  // If getWeather returned null/undefined (due to error), show alert
+  if (!data) {
+    alert("Something went wrong, please try again later.");
+    return;
+  }
+
+  const { weather, main, wind, name } = data;
+
+  // Helper to handle N/A logic
+  const getValue = (val) => (val === undefined ? "N/A" : val);
+
+  document.getElementById("location").textContent = getValue(name);
+  // Handle nested weather array safely
+  document.getElementById("weather-icon").src = weather?.[0]?.icon || "";
+  document.getElementById("weather-main").textContent = getValue(weather?.[0]?.main);
+  
+  // Handle main object
+  document.getElementById("main-temperature").textContent = getValue(main?.temp);
+  document.getElementById("feels-like").textContent = getValue(main?.feels_like);
+  document.getElementById("humidity").textContent = getValue(main?.humidity);
+  
+  document.getElementById("wind").textContent = getValue(wind?.speed);
+  document.getElementById("wind-gust").textContent = getValue(wind?.gust);
+}
+
+getWeatherBtn.addEventListener("click", () => {
+  const selectedCity = citySelect.value;
+  if (selectedCity) {
+    showWeather(selectedCity);
+  }
+});
+
+** end of script.js **
+
