@@ -1,0 +1,191 @@
+** start of index.html **
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Event RSVP</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.development.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.development.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.26.5/babel.min.js"></script>
+    <script
+      data-plugins="transform-modules-umd"
+      type="text/babel"
+      src="index.jsx"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script
+      data-plugins="transform-modules-umd"
+      type="text/babel"
+      data-presets="react"
+      data-type="module"
+    >
+      import { EventRSVPForm } from './index.jsx';
+      ReactDOM.createRoot(document.getElementById('root')).render(
+        <EventRSVPForm />
+      );
+    </script>
+  </body>
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f4f6f8;
+  padding: 20px;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1e4fd6;
+}
+
+button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+p {
+  margin: 6px 0;
+}
+
+
+** end of styles.css **
+
+** start of index.jsx **
+
+const { useState } = React;
+
+export function EventRSVPForm() {
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [attendees, setAttendees] = useState(1);
+  const [dietary, setDietary] = useState("");
+  const [guests, setGuests] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e) =>{
+    e.preventDefault()
+    setSubmitted(true)
+  }
+
+  return(
+    <div>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          required
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Name"
+        />
+
+        <input
+          type="email"
+          required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Email"
+        />
+
+        <input
+          type="number"
+          required
+          min="1"
+          value={attendees}
+          onChange={(e) => setAttendees(e.target.value)}
+        />
+
+        <input
+          type="text"
+          value={dietary}
+          onChange={(e) => setDietary(e.target.value)}
+          placeholder="Dietary preferences"
+        />
+
+        <label>
+          <input
+            type="checkbox"
+            checked={guests}
+            onChange={(e) => setGuests(e.target.checked)}
+          />
+          Bringing additional guests
+        </label>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      {submitted && (
+        <div>
+          <h2>RSVP Submitted!</h2>
+          <p>Name: {name}</p>
+          <p>Email: {email}</p>
+          <p>Number of attendees: {attendees}</p>
+          <p>Dietary preferences: {dietary || "None"}</p>
+          <p>Bringing additional guests: {guests ? "Yes" : "No"}</p>
+        </div>
+      )}
+    </div>
+  )
+}
+
+** end of index.jsx **
+
