@@ -1,0 +1,138 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Currency Converter</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.development.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.development.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.26.5/babel.min.js"></script>
+    <script
+      data-plugins="transform-modules-umd"
+      type="text/babel"
+      src="index.jsx"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div id="root"></div>
+    <script
+      data-plugins="transform-modules-umd"
+      type="text/babel"
+      data-presets="react"
+      data-type="module"
+    >
+      import { CurrencyConverter } from './index.jsx';
+      ReactDOM.createRoot(document.getElementById('root')).render(<CurrencyConverter />);
+    </script>
+</body>
+
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+.currency-converter {
+  max-width: 360px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #3d546e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+ width: 100%;
+ padding: 10px 12px;
+}
+
+.currency-converter input,
+.currency-converter select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  border: 1px solid #a8bddd;
+  border-radius: 4px;
+  outline: none;
+}
+
+.currency-converter input:focus,
+.currency-converter select:focus {
+  border-color: #2563eb;
+}
+
+.currency-converter p {
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  color: #111827;
+}
+
+
+** end of styles.css **
+
+** start of index.jsx **
+
+const { useState, useMemo } = React;
+
+const rates = {
+    USD: 1,
+    EUR: 0.92,
+    GBP: 0.78,
+    JPY: 156.7,
+    CFA: 559.4
+  }
+
+export function CurrencyConverter() {
+
+  const [amount, setAmount] = useState(1)
+  const [fromCurrency, setFromCurrency] = useState("USD");
+  const [toCurrency, setToCurrency] = useState("EUR")
+  
+  const baseConvertedAmount = useMemo(()=>{
+    return amount/rates[fromCurrency]
+  },[amount, fromCurrency])
+
+  const finalAmount = (baseConvertedAmount * rates[toCurrency]).toFixed(2);
+
+  return(
+    <div className="currency-converter">
+    <h1>Currency Converter</h1>
+      <input
+        type="number"
+        value={amount}
+        onChange={(e) => setAmount(Number(e.target.value))}
+      />
+      <select value={fromCurrency} 
+      onChange={(e)=>setFromCurrency(e.target.value)}>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <option value="JPY">JPY</option>
+        <option value="CFA">CFA</option>
+      </select>
+      <select
+        value={toCurrency}
+        onChange={(e) => setToCurrency(e.target.value)}
+      >
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <option value="JPY">JPY</option>
+        <option value="CFA">CFA</option>
+      </select>
+
+      <p>{finalAmount} {toCurrency}</p>
+    </div>
+  )
+}
+
+** end of index.jsx **
+
