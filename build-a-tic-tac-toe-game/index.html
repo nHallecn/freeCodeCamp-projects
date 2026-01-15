@@ -1,0 +1,163 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Tic-Tac-Toe</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.development.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.development.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.26.5/babel.min.js"></script>
+    <script
+      data-plugins="transform-modules-umd"
+      type="text/babel"
+      src="index.jsx"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div id="root"></div>
+    <script
+      data-plugins="transform-modules-umd"
+      type="text/babel"
+      data-presets="react"
+      data-type="module"
+    >
+      import { Board } from './index.jsx';
+      ReactDOM.createRoot(document.getElementById('root')).render(<Board />);
+    </script>
+</body>
+
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid #111;
+  background-color: #ffffff;
+}
+
+.square:disabled {
+  cursor: not-allowed;
+}
+
+.status {
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#reset {
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+
+** end of styles.css **
+
+** start of index.jsx **
+
+const { useState } = React;
+
+export function Board() {
+  const [squares, setSquares] = useState(Array(9).fill(null));
+  const [isXNext, setIsXNext] = useState(true);
+  const [winner, setWinner] = useState(null);
+
+  const winningCombinations = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+  ];
+
+  const calculateWinner = (board) => {
+    for (let combo of winningCombinations) {
+      const [a, b, c] = combo;
+      if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+        return board[a];
+      }
+    }
+    return null;
+  };
+
+  const handleClick = (index) => {
+    if (squares[index] || winner) return;
+
+    const newSquares = [...squares];
+    newSquares[index] = isXNext ? "X" : "O";
+
+    const gameWinner = calculateWinner(newSquares);
+
+    setSquares(newSquares);
+    setIsXNext(!isXNext);
+    setWinner(gameWinner);
+  };
+
+  const handleReset = () => {
+    setSquares(Array(9).fill(null));
+    setIsXNext(true);
+    setWinner(null);
+  };
+
+  const isDraw = !winner && squares.every(Boolean);
+
+  return (
+    <div className="game">
+      <div className="board">
+        {squares.map((value, index) => (
+          <button
+            key={index}
+            className="square"
+            onClick={() => handleClick(index)}
+          >
+            {value}
+          </button>
+        ))}
+      </div>
+
+      <p className="status">
+        {winner && `Winner: ${winner}`}
+        {!winner && isDraw && "Draw"}
+        {!winner && !isDraw && "Game in progress"}
+      </p>
+
+      <button id="reset" onClick={handleReset}>
+        Reset
+      </button>
+    </div>
+  );
+}
+
+** end of index.jsx **
+
