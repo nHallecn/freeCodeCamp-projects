@@ -48,3 +48,28 @@ export function EventRSVPForm() {
           onChange={(e) => setDietary(e.target.value)}
           placeholder="Dietary preferences"
         />
+          <label>
+          <input
+            type="checkbox"
+            checked={guests}
+            onChange={(e) => setGuests(e.target.checked)}
+          />
+          Bringing additional guests
+        </label>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      {submitted && (
+        <div>
+          <h2>RSVP Submitted!</h2>
+          <p>Name: {name}</p>
+          <p>Email: {email}</p>
+          <p>Number of attendees: {attendees}</p>
+          <p>Dietary preferences: {dietary || "None"}</p>
+          <p>Bringing additional guests: {guests ? "Yes" : "No"}</p>
+        </div>
+      )}
+    </div>
+  )
+}
