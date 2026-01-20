@@ -1,0 +1,58 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photography Exhibit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 p-6">
+
+    <div class="main-container grid grid-cols-3 gap-6">
+
+      <div class="card rounded-lg p-4 bg-white shadow">
+        <img 
+          src="https://cdn.freecodecamp.org/curriculum/labs/colosseo.jpg" 
+          alt="Colosseo" 
+          class="rounded-lg mb-4"
+        />
+        <div class="subheading font-bold text-lg mb-2">Colosseo</div>
+        <div class="description text-base">
+          The Colosseo, or Colosseum, is an iconic symbol of Rome.
+        </div>
+      </div>
+
+      <div class="card rounded-lg p-4 bg-white shadow">
+        <img 
+          src="https://cdn.freecodecamp.org/curriculum/labs/alps.jpg" 
+          alt="Alps" 
+          class="rounded-lg mb-4"
+        />
+        <div class="subheading font-bold text-lg mb-2">Alps</div>
+        <div class="description text-base">
+          Majestic mountains in Europe, perfect for hiking and skiing.
+        </div>
+      </div>
+
+      <div class="card rounded-lg p-4 bg-white shadow">
+        <img 
+          src="https://cdn.freecodecamp.org/curriculum/labs/sea.jpg" 
+          alt="Sea" 
+          class="rounded-lg mb-4"
+        />
+        <div class="subheading font-bold text-lg mb-2">Sea</div>
+        <div class="description text-base">
+          Crystal-clear waters and breathtaking coastal views.
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>
+
+
+** end of index.html **
+
