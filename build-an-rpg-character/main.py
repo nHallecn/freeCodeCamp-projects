@@ -1,5 +1,3 @@
-** start of main.py **
-
 full_dot = '●'
 empty_dot = '○'
 
@@ -31,7 +29,4 @@ def create_character(name, strength, intelligence, charisma):
         + stat_line("INT", intelligence) + "\n"
         + stat_line("CHA", charisma)
     )
-
-
-** end of main.py **
 
