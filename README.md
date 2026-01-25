@@ -62,6 +62,9 @@ To do list |A styled to-do list  |HTML5,CSS3
 |build-a-bookmark-manager-app|build-a-bookmark-manager-app|HTML5, CSS3, JS
 |build-a-bank-account-management-program|build-a-bank-account-management-program|HTML5, CSS3, JS
 |build-a-project-idea-board|build-a-project-idea-board|HTML5, CSS3, JS
+|Simplement-a-spinal-case-converter|Simplement-a-spinal-case-converter|HTML5, CSS3, JS
+|||HTML5, CSS3, JS
+|||HTML5, CSS3, JS
 |||HTML5, CSS3, JS
 ## 🛠️ Technologies & Tools
 
