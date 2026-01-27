@@ -64,7 +64,7 @@ To do list |A styled to-do list  |HTML5,CSS3
 |build-a-project-idea-board|build-a-project-idea-board|HTML5, CSS3, JS
 |Simplement-a-spinal-case-converter|Simplement-a-spinal-case-converter|HTML5, CSS3, JS
 |build-a-tic-tac-toe-game|build-a-tic-tac-toe-game|HTML5, CSS3, JSX
-|||HTML5, CSS3, JS
+|build-a-smart-word-replacement-function|build-a-smart-word-replacement-function| JS
 |||HTML5, CSS3, JS
 ## 🛠️ Technologies & Tools
 
