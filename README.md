@@ -66,6 +66,8 @@ To do list |A styled to-do list  |HTML5,CSS3
 |build-a-tic-tac-toe-game|build-a-tic-tac-toe-game|HTML5, CSS3, JSX
 |build-a-smart-word-replacement-function|build-a-smart-word-replacement-function| JS
 |||HTML5, CSS3, JS
+|||HTML5, CSS3, JS
+|||HTML5, CSS3, JS
 ## 🛠️ Technologies & Tools
 
 This curriculum covers a wide range of modern web development technologies. The main tools I am using throughout these projects include:
