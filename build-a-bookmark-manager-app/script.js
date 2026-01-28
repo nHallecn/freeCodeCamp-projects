@@ -1,6 +1,4 @@
-** start of script.js **
 
-// Elements
 const categoryDropdown = document.getElementById('category-dropdown');
 const addBookmarkBtn = document.getElementById('add-bookmark-button');
 const closeFormBtn = document.getElementById('close-form-button');
@@ -143,10 +141,6 @@ deleteBookmarkBtn.addEventListener('click', () => {
   }
 });
 
-
-** end of script.js **
-
-** start of index.html **
 
 <!DOCTYPE html>
 <html lang="en">
