@@ -1,5 +1,3 @@
-** start of script.js **
-
 const poll = new Map()
 
 function addOption(option){
@@ -47,6 +45,4 @@ addOption("USA");
 vote("Cameroon", "travel1");
 vote("USA", "travel2");
 vote("Nigeria", "travel3");
-
-** end of script.js **
 
