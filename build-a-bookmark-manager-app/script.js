@@ -140,14 +140,3 @@ deleteBookmarkBtn.addEventListener('click', () => {
     });
   }
 });
-
-
-
-** end of index.html **
-
-** start of styles.css **
-
-
-
-** end of styles.css **
-
