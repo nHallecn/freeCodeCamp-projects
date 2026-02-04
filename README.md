@@ -67,7 +67,12 @@ To do list |A styled to-do list  |HTML5,CSS3
 |build-a-smart-word-replacement-function|build-a-smart-word-replacement-function| JS
 |build-a-number-pattern-generator|build-a-number-pattern-generator|PY
 |build-an-fcc-forum-leaderboard|build-an-fcc-forum-leaderboard|HTML5, CSS3, JS
+|Higher order functions|Higher order functions| JS
 |||HTML5, CSS3, JS
+|||HTML5, CSS3, JS
+
+
+
 ## 🛠️ Technologies & Tools
 
 This curriculum covers a wide range of modern web development technologies. The main tools I am using throughout these projects include:
