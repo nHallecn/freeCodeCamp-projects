@@ -66,7 +66,7 @@ To do list |A styled to-do list  |HTML5,CSS3
 |build-a-tic-tac-toe-game|build-a-tic-tac-toe-game|HTML5, CSS3, JSX
 |build-a-smart-word-replacement-function|build-a-smart-word-replacement-function| JS
 |build-a-number-pattern-generator|build-a-number-pattern-generator|PY
-|||HTML5, CSS3, JS
+|build-an-fcc-forum-leaderboard|build-an-fcc-forum-leaderboard|HTML5, CSS3, JS
 |||HTML5, CSS3, JS
 ## 🛠️ Technologies & Tools
 
