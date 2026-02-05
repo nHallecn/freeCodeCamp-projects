@@ -69,7 +69,7 @@ To do list |A styled to-do list  |HTML5,CSS3
 |build-an-fcc-forum-leaderboard|build-an-fcc-forum-leaderboard|HTML5, CSS3, JS
 |Higher order functions|Higher order functions| JS
 |build-an-event-rsvp|build-an-event-rsvp|HTML5, CSS3, JS
-|||HTML5, CSS3, JS
+|lab-javascript-trivia-bot|lab-javascript-trivia-bot| JS
 |||HTML5, CSS3, JS
 |||HTML5, CSS3, JS
 |||HTML5, CSS3, JS
